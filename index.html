@@ -1,709 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Convertir base 2 &lt;—&gt; base 10 • Convertisseur de nombres • Convertisseurs d’unités populaires • Calculateur compact • Convertisseurs d’unités en ligne</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conversion d&#39;unités de mesure de base 2 vers base 10 (—)">
+  <link rel="canonical" href="https://www.translatorscafe.com/unit-converter/fr-FR/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="fr-FR" href="https://www.translatorscafe.com/unit-converter/fr-FR/numbers/5-13/base-2-base-10/">
 
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>    
-<html lang="fr"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-    <!--begin of Nikaia/htmlheader.phtml-->
-<meta charset="windows-1252" />
-<title>Convertisseuse de base</title>
-<meta name="GENERATOR" content="wims [fr]" />
-<meta name="description" content="convertir un nombre entre différentes bases de numération, précision arbitraire. This is the main site of WIMS (WWW Interactive Multipurpose Server): interactive exercises, online calculators and plotters, mathematical recreation and games" />
-<meta name="keywords" content="wims, mathematics, mathematical, math, maths, interactive mathematics, interactive math, interactive maths, mathematic, online, calculator, graphing, exercise, exercice, puzzle, calculus, K-12, algebra, mathématique, interactive, interactive mathematics, interactive mathematical, interactive math, interactive maths, mathematical education, enseignement mathématique, mathematics teaching, teaching mathematics, algebra, geometry, calculus, function, curve, surface, graphing, virtual class, virtual classes, virtual classroom, virtual classrooms, interactive documents, interactive document, algebra, number, numeration, conversion" />
-<meta name="Author" content="XIAO,Gang" />
-
-
-
-<!-- makes browsers render all elements more consistently -->
-<link rel="stylesheet" href="scripts/js/external/normalize.min.css" />
-
-<!-- METAS iOS : -->
-<link rel="apple-touch-icon" href="gifs/wims_logo.png" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-
-<!-- prevents links from apps from opening in mobile safari>
-<script src="scripts/js/external/safari_mobile_links/compressed.js"></script-->
-
-<!-- Librairies JQUERY -->
-<script src="scripts/js/external/jquery/jquery.min.js"></script>
-<link rel="stylesheet" href="scripts/js/external/jquery-ui/themes/smoothness/jquery-ui.min.css" />
-<script src="scripts/js/external/jquery-ui/jquery-ui.min.js"></script>
-
-<!-- Foundation Accordion -->
-<link rel="stylesheet" href="html/themes/_css/foundation_accordion.css" />
-
-<link href="html/themes/Nikaia/css.css?ver=4.24" rel="stylesheet" /><link href="gifs/themes/Font_Awesome/icon-min.css?ver=4.24" rel="stylesheet" />
-
-<!-- wimsmenumodubox -->
-<script src="html/themes/_inc/wimsmenumodubox.js"></script>
-
-<!-- javascripts utils -->
-<!--script src="scripts/js/utils.js"></script-->
-<!-- JQUERY pour autocompletion -->
-<script src="scripts/js/interface/autocomplete.js"></script>
-
-<!-- Style pour impression -->
-<link rel="stylesheet" media="print" href="html/themes/_css/print.css" />
-
-<style>
-/* Attention : ne surtout pas utiliser "background image" ici, cela crÃ©e des bugs Ã©tranges (exercices incohÃ©rents dans modtool...);*/
-
-/* Couleurs CSS configurables depuis la configuration du site */
-:root {
-  --wims_bgcolor: #f6f6f9;
-  --wims_link_color: #1468A0;
-  --wims_vlink_color: #1779BA;
-  --wims_hlink_color: #004077;
-  --wims_ref_menucolor: #fefefe;
-  --wims_ref_bgcolor: #4173ac;
-  --wims_ref_button_color: #ffffff;
-  --wims_ref_button_bgcolor: #4179b3;
-  --wims_ref_button_help_bgcolor: #0e8a16;
-  --wims_ref_button_help_color: #ffffff;
-}
-
-.main_body:not(.mode_popup) {
-  background-color: var(--wims_ref_bgcolor);
-  /*color: ;*/
+<link rel="alternate" hreflang="en-US" href="https://www.translatorscafe.com/unit-converter/en-US/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="de-DE" href="https://www.translatorscafe.com/unit-converter/de-DE/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="id-ID" href="https://www.translatorscafe.com/unit-converter/id-ID/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="it-IT" href="https://www.translatorscafe.com/unit-converter/it-IT/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="ru-RU" href="https://www.translatorscafe.com/unit-converter/ru-RU/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="es-ES" href="https://www.translatorscafe.com/unit-converter/es-ES/numbers/5-13/base-2-base-10/">
+<link rel="alternate" hreflang="tr-TR" href="https://www.translatorscafe.com/unit-converter/tr-TR/numbers/5-13/base-2-base-10/">
+  <link type="text/css" rel="stylesheet" href="/static/ucvt/unitconverter.css?20220216" />
   
-}
-
-a, .ui-widget-content a{color:var(--wims_link_color);}
-/*a:visited {color:var(--wims_vlink_color);}*/
-a:hover, a:focus {color:var(--wims_hlink_color);}
-
-#wimsbodybox{
-  /*default background-color */
-  background-color: #f5f5f5;
-  background-color: var(--wims_bgcolor);
-}
-
-div#wimstailbox,
-.oef_name_menu,
-table.wimstable th,
-.answer_analysis .oefanswername{
-  background-color: var(--wims_ref_bgcolor);
-  color: var(--wims_ref_menucolor);
-}
-div#wimstailbox a,
-.wimstable th a{
-  color: var(--wims_ref_menucolor);
-}
-
-/* Foundation dropdown custom css */
-.dropdown.menu > li.is-dropdown-submenu-parent > a:after { border-top-color: var(--wims_ref_bgcolor);}
-.dropdown.menu > li.is-dropdown-submenu-parent:hover > a:after { border-top-color: var(--wims_ref_bgcolor);}
-.dropdown.menu > li.is-dropdown-submenu-parent.is-active > a:after{ border-top-color: var(--wims_ref_menucolor);}
-.dropdown.menu > li.is-active>a,.menu a:hover,#wimsbodybox .menu a:hover
-  { background-color: var(--wims_ref_bgcolor);color:var(--wims_ref_menucolor)}
-.is-dropdown-submenu li:hover{ background-color: var(--wims_ref_bgcolor)}
-.is-dropdown-submenu a:hover{ color:var(--wims_ref_menucolor)}
-
-
-/* Sliding MenuModuBox */
-
-.slide-menu-closed .slide-menu:hover, .slide-menu-opened .slide-menu{
-  background-color: var(--wims_ref_bgcolor);
-}
-
-.slide-menu, .slide-menu a{
-  color: var(--wims_ref_menucolor);
-}
-
-
-.wimstable caption a{
-  color: var(--wims_ref_menucolor);
-}
-
-.infobulle{
-  background-color: var(--wims_ref_button_bgcolor);
-  color: var(--wims_ref_button_color);
-}
-
-/*.menuitem a:before{color:var(--wims_ref_bgcolor);}*/
-.wims_emph {color:var(--wims_ref_bgcolor);}
-
-/* Breadcrumb */
-.breadcrumbs>li>a{color: var(--wims_ref_bgcolor)}
-
-
-input[type="submit"],input[type="button"], .main_body .wims_button{
-    background-color:var(--wims_ref_button_bgcolor);
-    color:var(--wims_ref_button_color);
-}
-.main_body .wims_button_help{
-    background-color:var(--wims_ref_button_help_bgcolor);
-    color:var(--wims_ref_button_help_color);
-}
-
-
-.property_fields
-  {border-color:var(--wims_ref_bgcolor);}
-.property_fields legend
-  {background-color: var(--wims_ref_bgcolor);}
-.property_fields legend,.property_fields legend>a
-  {color:var(--wims_ref_menucolor);}
-
-.wims_color1 {
-   background-color: var(--wims_ref_bgcolor);
-   color:var(--wims_ref_menucolor);
-}
-.wims_color2 {
-  background-color:var(--wims_ref_button_bgcolor);
-  color:var(--wims_ref_button_color);
-}
-.wims_color3 {
-  background-color:var(--wims_ref_button_help_bgcolor);
-  color:var(--wims_ref_button_help_color);
-}
-
-
-</style>
-
-
-<!--end Nikaia/htmlheader.phtml-->
-
-
-<script>/*<![CDATA[*/function wims_mathml_zoom(id){var math = document.getElementById(id);if(math.getAttribute("mathsize") == "100%"){  math.setAttribute("mathsize","200%");}else{  math.setAttribute("mathsize","100%");};};window.addEventListener("load", function() {  var ua = navigator.userAgent.toLowerCase();  var gecko = ua.indexOf("gecko") > -1 && ua.indexOf("khtml") === -1 && ua.indexOf("trident") === -1;  if(! gecko ){    var script = document.createElement("script");    script.src  = "scripts/js/mathjax/mml-chtml.js";    document.head.appendChild(script);  };});/*]]>*/</script>
-
-<script>reload_mathML=function(){var t=document.getElementsByClassName("wims_mathml");Array.prototype.filter.call(t,function(t){var e=t.style.display;t.style.display="none",t.style.opacity="0",setTimeout(function(){t.style.display=e},1e3),setTimeout(function(){t.style.opacity="1"},1100)})},document.onreadystatechange=function(){"complete"===document.readyState&&(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)&&reload_mathML())};</script></head>
-<body class="main_body" dir="ltr"  >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- begin of Nikaia/header.phtml -->
-
-
-
-
-
-
-
-<!-- Start Nikaia topbox Widget -->
-<div id="wimstopbox">
-
-<!-- _widgets/site_title-->
-<div id="wims_title">
-  <div class="wimslogo">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?session=5WE7DDD071.1&+lang=fr&+module=home&+special_parm=logo"   ><img src="gifs/logo.gif" alt="WIMS logo" /></a>  </div>
-  <h1 class="wims_title">WIMS
-    <span class="smaller wims_subtitle">
-      <a href="/">wims.univ-cotedazur.fr</a>
-    </span>
-  </h1>
+  <meta name="apple-mobile-web-app-title" content="TC Unit Converter" />
+<meta name="application-name" content="TC Unit Converter" />
+<meta name="msapplication-config" content="/static/ucvt/assets/browserconfig.xml" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="apple-touch-icon" sizes="180x180" href="/static/ucvt/assets/apple-touch-icon-180.png" />
+<link rel="icon" type="image/png" href="/static/ucvt/assets/favicon-32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/static/ucvt/assets/favicon-16.png" sizes="16x16" />
+<link rel="manifest" href="/unit-converter/manifest.aspx?lc=fr-FR&cvt=numbers" />
+<script src="/static/ucvt/tcuc_wa.js?20200207"></script>
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" href="/static/tcSiteNotifications.css?20200221" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  (window.jQuery || document.write('<script src="/static/jquery-3.3.1.min.js"><\/script>'));
+</script>
+
+  <script type="text/javascript" src="/static/ucvt/unitconverter.js?20201109"></script>
+  
+  <script type="text/javascript" src="/static/ucvt/tcuc.js?20200827"></script>
+  
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ5YG77TSK"></script>
+<script>
+window.dataLayer = window.dataLayer || []; 
+function gtag() { dataLayer.push(arguments); } 
+gtag('js', new Date()); 
+gtag('config', 'G-NZ5YG77TSK');
+</script>
+<!-- End of Google tag (gtag.js) --> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-122694-1', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'anonymizeIp', true);
+</script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+ google_ad_client: "ca-pub-1832586766930966",
+ enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+<div class="site-notifications-container" id="site-notifications-container"><div dir="ltr" class="site-notification-block site-notification-cookie-consent" id="site-notification-cookie-consent"><div class="tc-cc-content"><div class="tc-cc-text">Nous utilisons des cookies afin de fournir à nos utilisateurs le contenu et les annonces qu'ils veulent et d'analyser notre trafic.
+Ces cookies sont nécessaires au bon fonctionnement du site TranslatorsCafe.com et ne peuvent être désactivés de nos systèmes.
+Vous pouvez configurer votre navigateur pour bloquer ces cookies.
+Cependant, certaines parties du site ne fonctionneront pas dans ce cas.
+Si vous poursuivez sans modifier vos paramètres, nous supposerons que vous ne voyez pas d'inconvénients à recevoir tous les cookies de notre site. <a target="_blank" href="/tcterms/fr-FR/help/?ctg=C&amp;HelpID=70">Plus de détails</a></div><div class="tc-cc-btns"> <span class="tc-cc-ok" id="tc-cookie-ok-btn">OK</span></div></div></div><script src="/static/notifyOnCookie.js?20200219"></script>
+<script type="text/javascript">
+  window.TCCookieConsent.initialize({
+    "container": "site-notifications-container",
+    "block": "site-notification-cookie-consent",
+    "cookie": "cookieCons",
+    "scroll":true
+  });
+</script></div>
+  <div class="uc-header">
+    <a href="/cafe/" class="uc-hdr-logo"><img alt="TranslatorsCafe.com" src="/static/ucvt/img/uc-logo.png" srcset="/static/ucvt/img/uc-logo.png 1x,/static/ucvt/img/uc-logo2x.png 2x"/></a>
+    <div class="uc-hdr-texts">
+      <a href="/unit-converter/fr-FR/"><h1>Convertisseur d'unité</h1></a>
+      <div>Convertissez aisément les unités de mesure !</div>
+    </div>
+    <div class="uc-hdr-cvt-image ucImgNmbrs"></div>
+    <a href="javascript:void(0);" class="uc-hdr-menu-btn"><img alt="Menu" src="/static/ucvt/img/uc-menu.gif" srcset="/static/ucvt/img/uc-menu.gif 1x,/static/ucvt/img/uc-menu2x.gif 2x"/></a>
+  </div>
+<ul class="uc-menu" aria-label="Menu du convertisseur d’unités"><li class="close">x</li><li class="opt"><a href="/cafe/">TranslatorsCafe.com</a></li><li class="opt"><a href="/unit-converter/fr-FR/">Convertisseurs d’unités en ligne</a></li><li class="selected"><a href="/unit-converter/fr-FR/length/">Populaires</a></li><li><a href="/unit-converter/fr-FR/velocity-angular/">Mécanique</a></li><li><a href="/unit-converter/fr-FR/fuel-efficiency-mass/">Chaleur</a></li><li><a href="/unit-converter/fr-FR/flow/">Fluides</a></li><li><a href="/unit-converter/fr-FR/sound/">Son</a></li><li><a href="/unit-converter/fr-FR/luminance/">Lumière</a></li><li><a href="/unit-converter/fr-FR/charge/">Électricité</a></li><li><a href="/unit-converter/fr-FR/magnetomotive-force/">Magnétisme</a></li><li><a href="/unit-converter/fr-FR/radiation/">Rayonnement</a></li><li><a href="/unit-converter/fr-FR/prefixes/">Divers</a></li><li class="uc-menu-item-em "><a href="/unit-converter/fr-FR/calculators/">Outils de Calcul</a></li><li class="opt"><b><a href="https://www.translatorscafe.com/unit-converter/fr-FR/numbers/5-13/base-2-base-10/?mobile=1" accesskey="M">Vue d'un appareil mobile</a></b></li><li class="search"><a href="/unit-converter/fr-FR/search.aspx" aria-label="Rechercher des convertisseurs d’unités">&nbsp;</a></li><li class="uc-language"><a href="#_">French (France)</a></li></ul>
+
+<div class="uc-main-block">
+  
+  <noscript>Ce site ne fonctionnera pas correctement, car votre navigateur ne prend pas en charge JavaScript !</noscript>
+  <table class="uc-main-tbl"><tr>
+
+  <td class="tdl">
+    <div class="uc-left-ad-slot">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Units Wide Skyscraper -->
+<ins class="adsbygoogle"
+ style="display:block;width:160px;height:600px;"
+ data-ad-client="ca-pub-1832586766930966"
+ data-ad-slot="0412656531"
+ ></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
-<!--end _widgets/site_title-->
-
-
-<!-- _widgets/institution_logo.phtml -->
-<!-- END _widgets/institution_logo.phtml -->
-
-    <br class="clearall" />
-
-  <div class="menuglobal top-bar">
-
-
-
-
-    <ul class="wimsmenu menu top-bar-left">
-
-    </ul>
-
-
-<!-- widget user_links -->
-<ul class="wimsmenu dropdown menu" data-dropdown-menu data-options="data-autoclose:true;">
-
-
-
-<!-- _widgets/headmenu.phtml -->
- <li class="menuitem about">
-
-
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?wims_window=new&+session=5WE7DDD071_mhelp&+lang=fr&+module=tool%2Fnumber%2Fbaseconv.fr&+cmd=help&+special_parm=about" target="wims_help" onclick="wims_help=window.open('','wims_help','status=no,toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes')"   class="about"  title="Pour des informations sur le module tool/number/baseconv.fr, son auteur, la version ..."><span class="text_item">À propos </span></a> </li>
-<!-- end _widgets/headmenu.phtml -->
-
-
-        <li id="language_selector" class="language_selector menuitem is-dropdown-submenu-parent">
-          <a href="#lang_list" class="lang">
-            <span><img src="gifs/fr.gif" alt="Français" /> Langue</span>
-          </a>
-
-<!-- begin of _widgets/language_selector.phtml -->
-<ul id="lang_list" class="language_selector menu">
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=en&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="English"><img src="gifs/en.gif" alt="English" class="vignette" /><span class="legende"> English</span></a>    </li>
-    <li class="menuitem
-        disabled">
-        <a class="current"><img src="gifs/fr.gif" alt="Français" class="vignette"/><span class="legende"> Français</span> <span class="smaller">(actuel)</span></a>
-    </li>
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=it&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Italiano"><img src="gifs/it.gif" alt="Italiano" class="vignette" /><span class="legende"> Italiano</span></a>    </li>
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=es&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Español"><img src="gifs/es.gif" alt="Español" class="vignette" /><span class="legende"> Español</span></a>    </li>
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=nl&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Nederlands"><img src="gifs/nl.gif" alt="Nederlands" class="vignette" /><span class="legende"> Nederlands</span></a>    </li>
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=cn&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Chinese gb"><img src="gifs/cn.gif" alt="Chinese gb" class="vignette" /><span class="legende"> Chinese gb</span></a>    </li>
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=si&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Slovensko"><img src="gifs/si.gif" alt="Slovensko" class="vignette" /><span class="legende"> Slovensko</span></a>    </li>
-    <li class="menuitem
-        ">
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=ca&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Català"><img src="gifs/ca.gif" alt="Català" class="vignette" /><span class="legende"> Català</span></a>    </li>
-</ul>
-<!-- end of _widgets/language_selector.phtml -->
-
-        </li>
-</ul>
-<!-- end widget user_links -->
-
-  </div><!-- /menuglobal -->
-
-
-
-<!-- _widgets/ariane.phtml -->
-<nav aria-label="You are here:">
-  <ul class="breadcrumbs">
-    <li class="home menuitem">
-
-
-<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=fr&+session=5WE7DDD071.1"   class="home"  title="Page d'accueil du serveur"><span>Accueil WIMS </span></a>        <span class="show-for-sr">(Current)</span>
-    </li>
-  </ul>
-</nav>
-
-</div><!-- fin de wimstopbox-->
-
-<!-- End Nikaia topbox Widget -->
-
-
-  <div id="wimsbodybox" class="no-js
-  ">
-
-
-  <div id="wimspagebox"
-
-   class="zone_etu type_"
-  >
-
-
-
-
-
-
-
-
-
-<!-- END of Nikaia/header -->
-
-
-
-  <div class="wimsbody">
-<!-- END of html/headmenu -->
-
-
-
-<!-- Begin html/title.phtml -->
-<div class="title_box">
- <h1 class="wims_title">
-   <span class="titre">Convertisseuse de base</span>
-  <br class="clearall"/>
- </h1>
+    <p class="uc-rnd-cvt"><a href="/unit-converter/fr-FR/electric-resistivity/5-8/microhm%20pouce-mil%20circulaire%20ohm%2fpied/">Random converter</a></p>
+    <div class="uc-left-ad-slot">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Units Wide Skyscraper -->
+<ins class="adsbygoogle"
+ style="display:block;width:160px;height:600px;"
+ data-ad-client="ca-pub-1832586766930966"
+ data-ad-slot="0412656531"
+ ></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
-<!-- end html/title.phtml -->
+    
+  </td>
 
-<p>
-  Cet outil très simple vous permet d'écrire un même nombre dans différentes 
-bases de numération.
-</p><p>
-  Par exemple, le nombre <span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml82043" mathsize="110%"><mi>&pi;</mi></mstyle></math></span> s'écrit &nbsp;:<ul><li>3.14159... en décimale (base 10),</li>
- <li>3.243F6... en hexadécimale (base 16)</li><li>ou 11.001001... en binaire (base 2).</li></ul>
-
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<hr style="width:50%" />
-<form action="https://wims.univ-cotedazur.fr/wims/wims.cgi" method="get"  >
-<div class='wims_form'><input type="hidden" name="session" value="5WE7DDD071.1" />
-<input type="hidden" name="lang" value="fr" />
-<input type="hidden" name="cmd" value="reply" />
-<input type="hidden" name="module" value="tool/number/baseconv.fr" />
-  <div class="field box">
-    <label for="input">Entrez votre nombre</label>
-    <input size="45" name="input" value="" id ="input" required/>
-    <label for="ibase">écrit en base</label>
-    <select name="ibase" id="ibase">
-        <option value="2"
-        >2
-            (binaire)
-        </option>
-        <option value="3"
-        >3
-        </option>
-        <option value="4"
-        >4
-        </option>
-        <option value="5"
-        >5
-        </option>
-        <option value="6"
-        >6
-        </option>
-        <option value="7"
-        >7
-        </option>
-        <option value="8"
-        >8
-            (octale)
-        </option>
-        <option value="9"
-        >9
-        </option>
-        <option value="10"
-          selected="selected"
-        >10
-            (décimale)
-        </option>
-        <option value="11"
-        >11
-        </option>
-        <option value="12"
-        >12
-        </option>
-        <option value="13"
-        >13
-        </option>
-        <option value="14"
-        >14
-        </option>
-        <option value="15"
-        >15
-        </option>
-        <option value="16"
-        >16
-            (hexadécimale)
-        </option>
-    </select>
+  <td>
+<div class="uc-main-ad-slot">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Units Converter -->
+<ins class="adsbygoogle"
+ style="display:block;width:728px;height:90px;"
+ data-ad-client="ca-pub-1832586766930966"
+ data-ad-slot="4584708730"
+ ></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  <h2 class="uc-page-title">Convertir base 2 &lt;—&gt; base 10</h2>
+  <div><select class="uc-cvt-selector" data-lc="fr-FR"><optgroup label="Convertisseurs d’unités populaires" ><option value="length">Convertisseur de longueur et de distance</option><option value="mass">Convertisseur de masse</option><option value="volume-dry">Mesures de volume sec et de cuisson courantes</option><option value="area">Convertisseur d’aire</option><option value="volume">Convertisseur de mesures courantes de volume et de cuisson</option><option value="temperature">Convertisseur de températures</option><option value="pressure">Convertisseur de pression, de contrainte et de module de Young</option><option value="energy">Convertisseur d'énergie et de travail</option><option value="power">Convertisseur de puissance</option><option value="force">Convertisseur de force</option><option value="time">Convertisseur de temps</option><option value="velocity">Convertisseur de vitesse et de vélocité linéaires</option><option value="angle">Convertisseur d’angle</option><option value="fuel-consumption">Convertisseur d’efficacité en carburant, de consommation de carburant et d’économie de carburant</option><option value="numbers" selected>Convertisseur de nombres</option><option value="data-storage">Unités d'information et de stockage de données</option><option value="currency">Taux de change des devises</option><option value="clothing-women">Taille des vêtements et chaussures pour femme</option><option value="clothing-men">Tailles des vêtements et chaussures pour homme</option></optgroup><optgroup label="Mécanique" ><option value="velocity-angular">Calculateur de vitesse angulaire et de fréquence de rotation</option><option value="acceleration">Convertisseur d’accélération</option><option value="acceleration-angular">Convertisseur d’accélération angulaire</option><option value="density">Masse volumique</option><option value="specific-volume">Convertisseur de volume spécifique</option><option value="moment-of-inertia">Convertisseur de moment d’inertie</option><option value="moment-of-force">Convertisseur de moment d’une Force</option><option value="momentum">Quantité de mouvement</option><option value="impulse">Impulse</option><option value="torque">Convertisseur de couple</option></optgroup><optgroup label="Thermodynamique – Chaleur" ><option value="fuel-efficiency-mass">Convertisseur d’énergie spécifique, de chaleur de combustion (par masse)</option><option value="fuel-efficiency-volume">Convertisseur d’énergie spécifique et de chaleur de combustion (par volume)</option><option value="temperature-interval">Convertisseur d’intervalle de température</option><option value="thermal-expansion">Coefficient de dilatation thermique</option><option value="thermal-resistance">Convertisseur de résistance thermique</option><option value="thermal-conductivity">Convertisseur de conductivité thermique</option><option value="specific-heat-capacity">Convertisseur de capacité thermique spécifique</option><option value="heat-density">Densité thermique, densité de charge calorifique</option><option value="heat-flux-density">Convertisseur de densité de flux thermique</option><option value="heat-transfer-coefficient">Coefficient de transfert thermique</option></optgroup><optgroup label="Hydraulique – Fluides" ><option value="flow">Convertisseur de débit volumétrique</option><option value="flow-mass">Convertisseur de débit massique</option><option value="flow-molar">Convertisseur débit molaire</option><option value="mass-flux-density">Convertisseur de flux massique</option><option value="concentration-molar">Convertisseur de concentration molaire</option><option value="concentration-solution">Convertisseur de concentration massique en solution</option><option value="viscosity-dynamic">Convertisseur de viscosité dynamique (absolue)</option><option value="viscosity-kinematic">Convertisseur de viscosité cinématique</option><option value="surface-tension">Convertisseur de tension superficielle</option><option value="permeability">Convertisseur de perméation, de perméance et de perméabilité à la vapeur d’eau</option><option value="moisture-vapor-transmission-rate">Convertisseur du Coefficient de Diffusion de la Vapeur d’Eau</option></optgroup><optgroup label="Acoustique – Son" ><option value="sound">Convertisseur des Niveaux Sonores</option><option value="microphone-sensitivity">Convertisseur de Sensibilité des Microphones</option><option value="sound-pressure-level">Convertisseur de niveau de pression acoustique (SPL)</option><option value="sound-pressure-level-reference">Convertisseur de niveau de pression acoustique avec pression de référence sélectionnable</option></optgroup><optgroup label="Photométrie – Lumière" ><option value="luminance">Convertisseur de luminance</option><option value="luminous-intensity">Convertisseur d’intensité lumineuse</option><option value="illumination">Convertisseur de l’éclairement lumineux</option><option value="digital-image-resolution">Convertisseur de Résolution d’une Image Numérique</option><option value="frequency-wavelength">Convertisseur de Fréquence et de Longueur d’Onde</option><option value="diopter-optical-power-to-focal-length">Convertisseur de puissance optique (dioptrie) en distance focale</option><option value="diopter-optical-power-to-magnification">Convertisseur de la puissance optique (dioptrie) en grossissement (X)</option></optgroup><optgroup label="Ingénierie électrique" ><option value="charge">Convertisseur de charge électrique</option><option value="linear-charge-density">Convertisseur linéaire de densité de charge</option><option value="surface-charge-density">Convertisseur de Densité Surfacique de Charge</option><option value="volume-charge-density">Convertisseur de densité de charge en volume</option><option value="current">Convertisseur de courant électrique</option><option value="linear-current-density">Convertisseur linéaire de densité de courant</option><option value="surface-current-density">Convertisseur de Densité Surfacique de Courant</option><option value="electric-field-strength">Le convertisseur d’intensité de champ électrique</option><option value="electric-potential">Le convertisseur de potentiel et de tension électrique</option><option value="electric-resistance">Convertisseur de résistance électrique</option><option value="electric-resistivity">Convertisseur de résistivité électrique</option><option value="electric-conductance">Le convertisseur de conductance électrique</option><option value="electric-conductivity">Le convertisseur de conductivité électrique</option><option value="electrostatic-capacitance">Capacitance ou capacité électrique</option><option value="inductance">Convertisseur d'inductance</option><option value="reactive-power">Convertisseur de puissance réactive en courant alternatif</option><option value="american-wire-gauge">Jauge de fil américaine, convertisseur</option><option value="dbm">Conversion des Niveaux en Unités dBm, dBV, Watts et Autres Unités</option></optgroup><optgroup label="Magnétostatique, magnétisme et électromagnétisme" ><option value="magnetomotive-force">Convertisseur de force magnétomotrice</option><option value="magnetic-field-strength">Convertisseur d’intensité du champ magnétique</option><option value="magnetic-flux">Convertisseur du flux magnétique</option><option value="magnetic-flux-density">Convertisseur de densité de flux magnétique</option></optgroup><optgroup label="Rayonnement et radiologie" ><option value="radiation">Débit de dose de rayonnement absorbée, Convertisseur de l’intégrale du débit de dose de rayonnement ionisant</option><option value="radiation-activity">La radioactivité. Le convertisseur de décroissance radioactive</option><option value="radiation-exposure">Convertisseur d’exposition aux rayonnements</option><option value="radiation-absorbed-dose">Le rayonnement. Le convertisseur de dose absorbée</option></optgroup><optgroup label="Convertisseurs divers" ><option value="prefixes">Convertisseur de préfixes métriques</option><option value="data-transfer">Convertisseur de transmission de données</option><option value="typography">Convertisseur d’unités de typographie et d’imagerie numérique</option><option value="volume-lumber">Convertisseur de mesures de volume de bois</option><option value="molar-mass">Calculateur de masse molaire</option><option value="periodic-table">Tableau périodique</option></optgroup></select></div>
+<div id="uc-calc-history"></div><div id="ucRes"></div><div class="uc-group"><div class="uc-input uc-col"><label for="uc-convert-from-input"><b>De :</b></label><input type="text" name="bindid=left&amp;base=1" value="" id="uc-convert-from-input" /><div class="uc-units-container"><select name="left" class="ucUnits" size="7"><option value="binary">binaire</option><option value="octal">octal</option><option value="decimal">décimal</option><option value="hexadecimal">hexadécimal</option><option value="base-2" selected>base 2</option><option value="base-3">base 3</option><option value="base-4">base 4</option><option value="base-5">base 5</option><option value="base-6">base 6</option><option value="base-7">base 7</option><option value="base-8">base 8</option><option value="base-9">base 9</option><option value="base-10">base 10</option><option value="base-11">base 11</option><option value="base-12">base 12</option><option value="base-13">base 13</option><option value="base-14">base 14</option><option value="base-15">base 15</option><option value="base-16">base 16</option><option value="base-17">base 17</option><option value="base-18">base 18</option><option value="base-19">base 19</option><option value="base-20">base 20</option><option value="base-21">base 21</option><option value="base-22">base 22</option><option value="base-23">base 23</option><option value="base-24">base 24</option><option value="base-25">base 25</option><option value="base-26">base 26</option><option value="base-27">base 27</option><option value="base-28">base 28</option><option value="base-29">base 29</option><option value="base-30">base 30</option><option value="base-31">base 31</option><option value="base-32">base 32</option><option value="base-33">base 33</option><option value="base-34">base 34</option><option value="base-35">base 35</option><option value="base-36">base 36</option></select></div><div id="ucDsl" class="ucDscr"></div></div><div class="uc-input uc-col"><label for="uc-convert-to-input"><b>Vers :</b></label><input type="text" name="bindid=right&amp;base=1" id="uc-convert-to-input" /><div class="uc-units-container"><select name="right" class="ucUnits" size="7"><option value="binary">binaire</option><option value="octal">octal</option><option value="decimal">décimal</option><option value="hexadecimal">hexadécimal</option><option value="base-2">base 2</option><option value="base-3">base 3</option><option value="base-4">base 4</option><option value="base-5">base 5</option><option value="base-6">base 6</option><option value="base-7">base 7</option><option value="base-8">base 8</option><option value="base-9">base 9</option><option value="base-10" selected>base 10</option><option value="base-11">base 11</option><option value="base-12">base 12</option><option value="base-13">base 13</option><option value="base-14">base 14</option><option value="base-15">base 15</option><option value="base-16">base 16</option><option value="base-17">base 17</option><option value="base-18">base 18</option><option value="base-19">base 19</option><option value="base-20">base 20</option><option value="base-21">base 21</option><option value="base-22">base 22</option><option value="base-23">base 23</option><option value="base-24">base 24</option><option value="base-25">base 25</option><option value="base-26">base 26</option><option value="base-27">base 27</option><option value="base-28">base 28</option><option value="base-29">base 29</option><option value="base-30">base 30</option><option value="base-31">base 31</option><option value="base-32">base 32</option><option value="base-33">base 33</option><option value="base-34">base 34</option><option value="base-35">base 35</option><option value="base-36">base 36</option></select></div><div id="ucDslm" class="ucDscr"></div><div id="ucDsr" class="ucDscr"></div></div></div><div class="uc-main-ad-slot">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Units Matched Content -->
+<ins class="adsbygoogle"
+ style="display:block;"
+ data-ad-client="ca-pub-1832586766930966"
+ data-ad-slot="1344967933"
+ data-ad-format="autorelaxed"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><div class="uc-article-teaser"><h4>Niveau de pression acoustique</h4><p><a href="/unit-converter/fr/sound-pressure-level/?redir=teaser#sound-pressure-level">Savez-vous pourquoi les chanteurs n’utilisent pas de microphones de mesure pour enregistrer en studio ?</a></p></div><div class="uc-article"><h1 id="numbers">En savoir plus sur les nombres</h1><div class="uc-group"><div class="uc-col uc-toc-txt" style="width:45%;"><div class="uc-article-toc-block"><p class="toc2"><a href="#02">Aperçu</a></p><p class="toc2"><a href="#04">Différentes façons de représenter les nombres</a></p><p class="toc3"><a href="#06">Numérations indo-arabe</a></p><p class="toc3"><a href="#09">Romaine</a></p><p class="toc3"><a href="#12">D’autres systèmes dans d’autres cultures</a></p><p class="toc3"><a href="#15">Unaire</a></p><p class="toc3"><a href="#17">Système positionnel</a></p><p class="toc3"><a href="#24">Binaire</a></p><p class="toc2"><a href="#39">Classification de nombre</a></p><p class="toc3"><a href="#41">Nombres négatifs</a></p><p class="toc3"><a href="#43">Nombres rationnels</a></p><p class="toc3"><a href="#45">Entiers naturels</a></p><p class="toc3"><a href="#47">Entiers relatifs</a></p><p class="toc3"><a href="#49">Nombres complexes</a></p><p class="toc3"><a href="#51">Nombres premiers</a></p><p class="toc2"><a href="#53">Faits intéressants sur les nombres</a></p><p class="toc3"><a href="#54">Chiffres financiers (anti-fraude)</a></p><p class="toc3"><a href="#56">Comptage moderne dans le commerce</a></p><p class="toc3"><a href="#58">Regroupement des nombres</a></p><p class="toc3"><a href="#60">Chiffres porte-malheur</a></p></div></div><div class="uc-col uc-toc-video" style="width:45%;"><span class="uc-video r" style="width:300px;"><div class="uc-youtube" id="6nDAIKkbmrc" data-params="modestbranding=0&showinfo=1&controls=2&vq=hd720" style="width: 300px; height: 180px;"></div><p><a href="/unit-converter/fr-FR/videos/?mode=English&amp;uc=numbers"><b>Learn technical English with this video!</b></a></p></span></div></div><h2 id="02">Aperçu</h2><div class="figure uc-fig-r" style="width: 282px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Iphone_Calculator_Numbers.png" alt="Application de calculatrice d’iPhone" class="nobrd uc-dyn uc-img-ph" style="width:100%;max-width:282px;height:85.8%;max-height:242px"><div class="figcaption">Application de calculatrice d’iPhone</div></div><p>Un nombre est un concept mathématique abstrait qui représente une quantité. Il est utilisé dans le comptage. Les nombres ont été utilisés depuis l’antiquité, d’abord sous la forme de marques de dénombrement — des entailles sur le bois ou l’os, ensuite ils ont été utilisés comme des systèmes plus abstraits. Il existe plusieurs façons d’exprimer les chiffres dans les systèmes de numération, certaines ne sont plus utilisées aujourd’hui.</p><h2 id="04">Différentes façons de représenter les nombres</h2><p>Certains chercheurs croient que le concept de nombre a été créé indépendamment dans différentes régions. Les représentations primitives des nombres par écrit sous forme de symboles, ont évolué individuellement, mais une fois que le commerce entre les pays et les continents s’est répandu, les gens ont appris et emprunté les uns des autres et les systèmes de nombres actuellement utilisés ont été créés grâce cette connaissance collective.</p><h3 id="06">Numérations indo-arabe</h3><p>Le système de numération arabo-indien est l’un des systèmes les plus largement utilisés dans le monde aujourd’hui. Il a été initialement développé en Inde et amélioré par les mathématiciens perses et arabes. Au Moyen Age, il s’est répandu dans le monde occidental grâce au commerce, pour remplacer la numération romaine. Il a ensuite été modifié et largement adopté dans le monde entier pour le commerce européen et des raisons de colonisation. C’est un système de base 10, c’est-à-dire qu’il est basé sur des multiples de dix et qu’il utilise dix symboles pour représenter tous les nombres.</p><p>Dix est un nombre commun à utiliser pour compter, puisque les gens n’ont que dix doigts et même les parties du corps ont souvent été utilisés pour compter historiquement. Jusqu’à nos jours, les gens qui apprennent à compter ou qui veulent illustrer le comptage dans la conversation utilisent souvent les doigts. Certaines cultures utilisaient aussi les orteils, les espaces entre les doigts et les articulations pour compter. Bizarrement, les nombres sont représentés en anglais par des «&nbsp;digits&nbsp;» qui veut dire des chiffres, le même mot qui est utilisé pour désigner les doigts et les orteils en anglais et dans de nombreuses autres langues.</p><div class="figure uc-fig-r" style="width: 300px"><a href="/galleries/london/index.html"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Roman_Numerals.jpg" alt="L’inscription en latin et avec des chiffres romains sur l’Arche de l&#39;Amirauté à Londres en témoigne : ANNO : DECIMO : EDWARDI : SEPTIMI : REGIS : VICTORIÆ : REGINÆ : CIVES : GRATISSIMI : MDCCCCX : (En la dixième année du règne d&#39;Édouard VII, à la reine Victoria, ses citoyens très reconnaissants, 1910)." class="uc-dyn uc-img-ph" style="width:100%;max-width:300px;height:95.0%;max-height:285px"></a><div class="figcaption">L’inscription en latin et avec des chiffres romains sur l’Arche de l'Amirauté à Londres en témoigne : ANNO : DECIMO : EDWARDI : SEPTIMI : REGIS : VICTORIÆ : REGINÆ : CIVES : GRATISSIMI : MDCCCCX : (En la dixième année du règne d'Édouard VII, à la reine Victoria, ses citoyens très reconnaissants, 1910).</div></div><h3 id="09">Romaine</h3><p>La numération romaine a été utilisé dans l’Empire romain et en Europe jusqu’au 14ème siècle. Elle est encore utilisée aujourd’hui dans certains contextes, par exemple sur les horloges, pour représenter les heures. Les chiffres romains sont basés sur sept nombres écrits avec les lettres de l’alphabet latin&nbsp;:</p><table dir="ltr" style="margin: 8pt auto;"><tr><td>I</td><td class="right">1</td></tr><tr><td>V</td><td class="right">5</td></tr><tr><td>X</td><td class="right">10</td></tr><tr><td>L</td><td class="right">50</td></tr><tr><td>C</td><td class="right">100</td></tr><tr><td>D</td><td class="right">500</td></tr><tr><td>M</td><td class="right">1000</td></tr></table><p>L’ordre est important dans le système romain parce qu’un symbole de valeur plus supérieur suivi du plus petit signifie que les deux doivent être ajoutés, mais quand l’un des symboles est devant un autre supérieur à lui signifie que le plus petit est soustrait du plus grand. Par exemple, XI est 11, mais IX est 9. La règle de soustraction n’est pas universelle et elle ne fonctionne que pour ces nombres&nbsp;: IV, IX, XL, XC, CD et CM. Dans certains cas, les règles de soustraction ne sont pas utilisées et les nombres sont écrits de manière successive.</p><h3 id="12">D’autres systèmes dans d’autres cultures</h3><p>Les gens de différents pays avaient des systèmes de représentation des nombres, qui ressemblent aux romains ou aux hindous-arabes. Par exemple, certains Slaves utilisaient l’alphabet cyrillique pour représenter des nombres comme de 1 à 9, des multiples de 10 et des multiples de 100, avec des symboles particuliers pour les nombres de plus grandes valeurs, ainsi que des symboles pour distinguer entre les chiffres et les lettres. La numération hébraïque utilise l’alphabet hébreu pour représenter les nombres de un à dix, les multiples de dix, 100, 200, 300 et 400. Le reste des nombres est représenté sous forme de multiples ou de sommes. La numération grecque est également similaire.</p><p>Certaines cultures optent pour des représentations plus simples, comme le système babylonien, qui n’a  conservé que deux symboles cunéiformes, pour le nombre un (ressemblant un peu à la lettre «&nbsp;T&nbsp;») et pour dix (légèrement similaire à la lettre «&nbsp;C&nbsp;»). Ainsi, par exemple, 32 serait écrit (en utilisant les symboles appropriés) comme CCCTT. Le système égyptien était très similaire, sauf qu’il y avait des symboles supplémentaires pour zéro, cent, mille, dix mille, cent mille et un million, ainsi que des notations spéciales pour les fractions. Les nombres dans la culture maya avaient des symboles pour zéro, un et cinq, avec une notation spéciale pour les nombres au-dessus de dix-neuf.</p><div class="figure uc-fig-l" style="width: 200px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Numbers_score.png" alt="Système de numération unaire. Marques de dénombrement dans diverses cultures" class="uc-dyn uc-img-ph" style="width:100%;max-width:200px;height:100.0%;max-height:200px"><div class="figcaption">Système de numération unaire. Marques de dénombrement dans diverses cultures</div></div><h3 id="15">Unaire</h3><p>Le système unaire représente chaque nombre avec le même nombre de symboles que sa valeur. Ces symboles sont généralement les mêmes, donc si 1 est représenté avec A, alors 5 serait représenté comme AAAAA. Lorsque les enfants apprennent à compter, leurs enseignants utilisent souvent ce système pour créer un lien entre un système concret et facile à comprendre, et une représentation plus abstraite des nombres. Parfois, ce système est également utilisé dans les jeux et d’autres calculs simples. Différents pays peuvent utiliser différents types de représentation pour cela. Par exemple, lorsqu’on conserve le score des équipes gagnantes ou on compte les objets ou les jours, les gens en Occident et d’autres régions écrivent souvent quatre lignes verticales, puis ils les traversent avec une cinquième ligne horizontale et répètent le processus. Par exemple, dans la partie A) de l’image, la personne qui compte a atteint quatre lignes et elle les a barrées, elle a ensuite atteint quatre autres et les a barrées et a continué à écrire les marques de dénombrement jusqu’à ce qu’elle en compte douze. Les gens qui utilisent ou ont historiquement utilisé des caractères chinois dans leurs systèmes d’écriture, par exemple en Chine, au Japon et en Corée, ils utilisent un certain caractère chinois avec cinq traits pour faire de même. Dans la partie B) de l’image, la personne compte jusqu’à cinq, elle complète le caractère, puis commence un nouveau, en continuant le comptage jusqu’à sept. L’ordre des traits est prédéterminé, comme montré dans l’image. Le système unaire est également utilisé en informatique.</p><div class="figure uc-fig-r" style="width: 300px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Original-Odhner_Arithmometer.jpg" alt="Un arithmomètre qui utilise le système décimal et une puce de microprocesseur qui utilise le système binaire" class="uc-dyn uc-img-ph" style="width:100%;max-width:300px;height:66.0%;max-height:198px"><div class="figcaption">Un arithmomètre qui utilise le système décimal et une puce de microprocesseur qui utilise le système binaire</div></div><h3 id="17">Système positionnel</h3><p>Les systèmes positionnels fonctionnent avec une base. Par exemple, dans la base 10, nous avons&nbsp;:</p><ol><li>La première position est pour les nombres de zéro à neuf, c’est-à-dire que le nombre dans la première position doit être multiplié par dix à la puissance zéro.</li><li>Le nombre dans la deuxième position est multiplié par dix à la puissance un.</li><li>Le nombre dans la troisième position est multiplié par dix à la puissance deux, et ainsi de suite, jusqu’à ce que les nombres dans toutes les positions sont comptés.</li></ol><p>Pour arriver à la valeur finale du nombre représenté, il faut additionner toutes les valeurs à chaque position. C’est une méthode pratique pour représenter des nombres, puisque elle permet d’utiliser des nombres ayant relativement de valeur supérieure, sans utiliser un grand espace pour les écrire.</p><p>Exemple&nbsp;:  3102 = 3 × 10³ + 1 × 10² + 0 × 10¹ + 2 × 10⁰</p><h3 id="24">Binaire</h3><p>Le système de numération binaire est largement utilisé en mathématiques et en informatique. Il est basé sur deux caractères, «&nbsp;0&nbsp;» et «&nbsp;1&nbsp;» pour représenter tous les nombres possibles. En d’autres termes, il s’agit d’un système de base 2. Les nombres sont représentés comme suit&nbsp;: 0 = 0, 1 = 1, et à partir de 2 le principe de l’addition est utilisé. L’addition en base 2 est similaire à l’addition en base 10. Pour incrémenter un nombre par un&nbsp;:</p><div class="figure uc-fig-l" style="width: 200px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Binary_Numbers_Intel.jpg" alt="Une représentation artistique de nombres binaires" class="uc-dyn uc-img-ph" style="width:100%;max-width:200px;height:77.5%;max-height:155px"><div class="figcaption">Une représentation artistique de nombres binaires</div></div><ul><li>Si le nombre se termine par un zéro, le dernier zéro est remplacé par un&nbsp;: par ex. 100 (4) + 1 (1) = 101 (5). Les chiffres de base 10 sont utilisés entre parenthèses pour la comparaison.</li><li>Si le nombre se termine par un mais sans qu’il soit complètement composé de 1, le premier zéro à partir de la droite est remplacé par un, tandis que tous ceux qui le suivent à droite deviennent des zéros&nbsp;: 1011 (11) + 1 (1) = 1100.</li><li>Si le nombre original est composé que de 1, alors ils seront tous changés en zéros, et un est ajouté à l’avant&nbsp;: 111 (7) + 1 (1) = 1000 (8).</li></ul><p>Pour ajouter deux nombres, alignés l’un sous l’autre, pour chaque position, 0 + 0 vaut 0, 1 + 0 vaut 1 et 1 + 1 vaut 10, où 0 est mis dans cette position et le 1 est reporté à la position suivante. Par exemple&nbsp;:</p><pre> 11111 (31)<br /> +1011 (11)<br />———————————<br />101010 (42)</pre><p>Dans ce cas, de droite à gauche&nbsp;:</p><ul><li>1 + 1 vaut 0, avec report de 1</li><li>1 + 1 + 1 vaut 1 avec report de 1.</li><li>1+1 vaut 0, avec report de 1</li><li>1 + 1 + 1 vaut 1 avec report de 1.</li><li>1 + 1 vaut 10</li></ul><p>Donc, en rassemblant les résultats, on obtient 101010.</p><p>La soustraction fonctionne selon le même principe, sauf qu’au lieu de reporter d’autres uns, nous les empruntons. La multiplication est également similaire à la multiplication dans la base 10. Multiplier par 0 donne un 0, alors que multiplier 1 par 1 donne 1. Ainsi, par exemple&nbsp;:</p><pre>  101  (5)<br />  ×10  (2)<br />———————————<br />  000<br /> 101<br />———————————<br /> 1010 (10)</pre><p>La division et le calcul des racines carrées sont également très similaires à la base 10.</p><div class="uc-main-ad-slot uc-article-ad-slot">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Units In-Article -->
+<ins class="adsbygoogle"
+ style="display:block;text-align:center;"
+ data-ad-client="ca-pub-1832586766930966"
+ data-ad-slot="7683245536"
+ data-ad-format="fluid" data-ad-layout="in-article"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><h2 id="39">Classification de nombre</h2><p>Tous les nombres peuvent être divisés en sous-ensembles. Certains des sous-ensembles ci-dessous se chevauchent partiellement.</p><div class="figure uc-fig-r" style="width: 200px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Destroying_Credit_Card.jpg" alt="La dette est un nombre négatif" class="uc-dyn uc-img-ph" style="width:100%;max-width:200px;height:82.0%;max-height:164px"><div class="figcaption">La dette est un nombre négatif</div></div><h3 id="41">Nombres négatifs</h3><p>Les nombres négatifs sont des nombres qui représentent une valeur négative. Ils sont précédés d’un signe moins. Par exemple, si la personne A n’a pas d’argent et elle doit 5 dollars à la personne B, alors la personne A possède −5 dollars. Ici, –5 est un chiffre négatif.</p><h3 id="43">Nombres rationnels</h3><p>Les nombres rationnels sont des nombres qui peuvent être exprimés en fractions où un dénominateur est un nombre naturel qui n’est pas zéro, et le numérateur est un entier relatif. Par exemple, 3/4 et −10/5 (équivaut à −2) sont des nombres rationnels.</p><h3 id="45">Entiers naturels</h3><p>Les entiers naturels sont ceux qui sont positifs (y compris 0) et ne sont pas des fractions, par exemple 7 ou 86, 766, 575, 675, 456.</p><h3 id="47">Entiers relatifs</h3><p>Les entiers relatifs comprennent zéro, les nombres négatifs et positifs qui ne sont pas des fractions. Par exemple les nombres −65 et 11,223.</p><h3 id="49">Nombres complexes</h3><p>Les nombres complexes sont l’ensemble des nombres qui s’écrivent sous forme d’une somme d’un nombre réel et un produit d’un autre nombre réel avec la racine carrée d’un nombre négatif.</p><h3 id="51">Nombres premiers</h3><p>Les nombres premiers sont des entiers naturels supérieurs à un qui produisent un nombre entier seulement quand il est divisé par un ou par lui-même. On peut citer quelques exemples comme 3, 5 et 11. 2<sup>57,885,161</sup>−1 est le plus grand nombre premier connu à l’hiver 2013. Il contient 17 425 170 chiffres. Les nombres premiers sont utilisés dans la cryptographie à clé publique, un système de codage des données, souvent utilisé dans l’échange de données sécurisé en ligne, comme dans les services bancaires sur le net.</p><h2 id="53">Faits intéressants sur les nombres</h2><div class="figure uc-fig-r" style="width: 300px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Chinese_Anti-Fraud_Numbers.gif" alt="Les chiffres financiers de la Chine" class="uc-dyn uc-img-ph" style="width:100%;max-width:300px;height:66.3%;max-height:199px"><div class="figcaption">Les chiffres financiers de la Chine</div></div><h3 id="54">Chiffres financiers (anti-fraude)</h3><p>Pour prévenir la falsification lors de l’écriture des chiffres dans le domaine du commerce, la langue chinoise utilise des caractères spéciaux complexes qui sont difficiles à falsifier en ajoutant des traits supplémentaires. Ceci est fait parce que les caractères chinois couramment utilisés pour les nombres sont trop simples et il est facile de modifier leur valeur en ajoutant des traits.</p><h3 id="56">Comptage moderne dans le commerce</h3><p>Certaines langues dans les pays où la base 10 est actuellement utilisée reflètent l’utilisation d’autres systèmes de nombres communs dans le passé. Par exemple, il existe dans la langue un mot spécial pour exprimer le nombre douze, il s’agit du mot «&nbsp;douzaine&nbsp;» traduit en anglais par dozen — actuellement utilisé surtout pour compter les œufs, les produits de boulangerie, le vin et les fleurs. Le khmer a des mots particuliers basés sur l’ancien système de base 20, pour compter les fruits.</p><h3 id="58">Regroupement des nombres</h3><p>En Chine et au Japon, le système de numération hindou-arabe est adopté, mais les grands nombres sont regroupés par 10&nbsp;000, cela se reflète dans la langue. En anglais, par exemple, il y a un mot pour 1000 et on précise combien de milliers il y a jusqu’à 999&nbsp;999. Il vient ensuite le mot million, représentant 1&nbsp;000&nbsp;000. En japonais, il y a un mot pour 10&nbsp;000 et après cela l’incrémentation continue à 99&nbsp;999&nbsp;999, suivi d’un mot spécial pour 100&nbsp;000&nbsp;000.</p><h3 id="60">Chiffres porte-malheur</h3><div class="figure uc-fig-r" style="width: 300px"><img src="/static/img/empty.gif" data-src="/static/ucvt/img/Da_Vinci_The_Last_Supper.jpg" alt="Léonard de Vinci. La Cène. Eglise de Sainte Marie de Grâce (Santa Maria delle Grazie), à Milan, Italie." class="uc-dyn uc-img-ph" style="width:100%;max-width:300px;height:53.0%;max-height:159px"><div class="figcaption">Léonard de Vinci. La Cène. Eglise de Sainte Marie de Grâce (Santa Maria delle Grazie), à Milan, Italie.</div></div><p>Dans la tradition occidentale, le <b>nombre 13</b> est considéré comme malchanceux. Beaucoup croient que cela est tiré de la tradition judéo-chrétienne, où treize était le nombre de disciples de Jésus-Christ durant la dernière cène, après laquelle le treizième disciple, Judas, a trahi Jésus. Il y avait aussi une superstition chez les Vikings que quelqu’un à un rassemblement de treize personnes mourra l’année prochaine.</p><p>En Russie et dans de nombreux pays de l’ex-Union soviétique, tous les <b>nombres pairs</b> sont considérés comme malchanceux. Il peut que cette tradition provient de la conviction que même les nombres pairs sont complets, stables et statiques, immobile, et donc pas vivant. Les nombres impairs, d’autre part, représentent le changement, le mouvement, une entité qui a besoin d’achèvement et de progression, et de vie. Selon cette croyance, il est considéré comme malchanceux de donner un nombre pair de fleurs aux personnes vivantes — ces nombres sont généralement réservés pour les funérailles.</p><p>Dans les pays où on parle chinois, japonais et coréen, le <b>numéro 4</b> est considéré comme malchanceux parce qu’il est prononcé de la même façon que la «&nbsp;mort&nbsp;». Dans certains cas, tous les numéros qui contiennent un quatre sont considérés comme malchanceux. Par exemple, un bâtiment peut ne pas avoir les étages 4, 14 et 24. En Chine, le <b>numéro 7</b> est également malchanceux parce qu’il représente le monde spirituel et les fantômes. Le septième mois du calendrier chinois est appelé le «&nbsp;mois de fantôme&nbsp;», où la connexion entre les mondes des vivants et les esprits est ouverte. Au Japon, l’autre nombre malchanceux est <b>9</b>, qui a la même prononciation que la «&nbsp;souffrance&nbsp;».</p><p>En Italie, le nombre <b>17</b> est malchanceux car quand sa représentation romaine «&nbsp;XVII&nbsp;» est réorganisée, elle se lit VIXI ou «&nbsp;vixi&nbsp;», traduit du latin par «&nbsp;j'ai vécu&nbsp;». C’est-à-dire que la vie est terminée, en se référant donc à la mort.</p><p>Le <b>666</b> est un autre nombre malchanceux, appelé le «&nbsp;Nombre de la Bête&nbsp;» dans la Bible. On croit parfois que ce nombre est 616, mais 666 est plus commun. Il se réfère à l’Antéchrist ou à Satan. Ses origines sont controversées mais certains chercheurs croient que 666 est la translittération en hébreu et 616 — en latin du nom de l’empereur Néron, qui est associé aux persécutions des chrétiens et au règne tyrannique et sanglant. Néron est également considéré par certains comme le pyromane pendant le grand incendie de Rome, bien que son implication soit controversée par les historiens.</p><p>En Afghanistan, surtout dans Kaboul et ses environs, <b>39</b> est considéré comme un nombre maudit ou honteux, il se rapporte à la prostitution. Il est lié à une histoire d’un proxénète, qui avait le numéro 39 dans sa plaque d’immatriculation et le numéro de son appartement. Certains accusent les autorités et les services de lutte contre la criminalité d’avoir répandu cette superstition pour profiter de l’achat et de la vente de voitures avec les plaques d’immatriculation «&nbsp;offensantes&nbsp;». La superstition est si forte que les gens raillent ou harcèlent ceux qui ont 39 dans leur plaque d’immatriculation, appartement, ou numéro de téléphone. Une telle rumeur d’intimidation a engendré une tragédie, lorsqu’un candidat parlementaire, placé 39 sur le bulletin de vote a été raillé par les conducteurs de passage, ce qui a causé un accident de la route. Les gardes du corps, craignant pour sa vie, ont tué par balles deux des personnes impliquées. Ces allégations sont démenties par les gardes du corps et le parlementaire et aucune accusation n’a été portée. Donc, on ne sait pas s’il s’agit d’une légende urbaine ou d’un événement réel, mais la rumeur circule à Kaboul.</p><p class="uc-references"><a href="/unit-converter/References.htm#Numbers">Références</a></p><p class="uc-authors">Cet article a été rédigé par <a href="/cafe/member188067.htm">Kateryna Yuri</a>.</p></div><div class="uc-articles-other"><p><a href="/unit-converter/fr-FR/numbers/3-7/d%c3%a9cimal-base%204/">Convertir décimal &lt;—&gt; base 4</a></p><p><a href="/unit-converter/fr-FR/numbers/1-39/binaire-base%2036/">Convertir binaire &lt;—&gt; base 36</a></p><p><a href="/unit-converter/fr-FR/numbers/3-2/d%c3%a9cimal-octal/">Convertir décimal &lt;—&gt; octal</a></p><p><a href="/unit-converter/fr-FR/numbers/3-35/d%c3%a9cimal-base%2032/">Convertir décimal &lt;—&gt; base 32</a></p><p><a href="/unit-converter/fr-FR/numbers/3-23/d%c3%a9cimal-base%2020/">Convertir décimal &lt;—&gt; base 20</a></p><p><a href="/unit-converter/fr-FR/numbers/6-3/base%203-d%c3%a9cimal/">Convertir base 3 &lt;—&gt; décimal</a></p><p><a href="/unit-converter/fr-FR/numbers/3-27/d%c3%a9cimal-base%2024/">Convertir décimal &lt;—&gt; base 24</a></p><p><a href="/unit-converter/fr-FR/numbers/4-3/hexad%c3%a9cimal-d%c3%a9cimal/">Convertir hexadécimal &lt;—&gt; décimal</a></p></div><div class="uc-other-converters"><h3>D’autres convertisseurs du groupe Convertisseurs d’unités populaires pourraient vous intéresser&nbsp;:</h3><p><a href="/unit-converter/fr-FR/length/">Convertisseur de longueur et de distance</a></p><p><a href="/unit-converter/fr-FR/mass/">Convertisseur de masse</a></p><p><a href="/unit-converter/fr-FR/volume-dry/">Mesures de volume sec et de cuisson courantes</a></p><p><a href="/unit-converter/fr-FR/area/">Convertisseur d’aire</a></p><p><a href="/unit-converter/fr-FR/volume/">Convertisseur de mesures courantes de volume et de cuisson</a></p><p><a href="/unit-converter/fr-FR/temperature/">Convertisseur de températures</a></p><p><a href="/unit-converter/fr-FR/pressure/">Convertisseur de pression, de contrainte et de module de Young</a></p><p><a href="/unit-converter/fr-FR/energy/">Convertisseur d'énergie et de travail</a></p><p><a href="/unit-converter/fr-FR/power/">Convertisseur de puissance</a></p><p><a href="/unit-converter/fr-FR/force/">Convertisseur de force</a></p><p><a href="/unit-converter/fr-FR/time/">Convertisseur de temps</a></p><p><a href="/unit-converter/fr-FR/velocity/">Convertisseur de vitesse et de vélocité linéaires</a></p><p><a href="/unit-converter/fr-FR/angle/">Convertisseur d’angle</a></p><p><a href="/unit-converter/fr-FR/fuel-consumption/">Convertisseur d’efficacité en carburant, de consommation de carburant et d’économie de carburant</a></p><p><a href="/unit-converter/fr-FR/data-storage/">Unités d'information et de stockage de données</a></p><p><a href="/unit-converter/fr-FR/prefixes/">Convertisseur de préfixes métriques</a></p><p><a href="/unit-converter/fr-FR/data-transfer/">Convertisseur de transmission de données</a></p><p><a href="/unit-converter/fr-FR/currency/">Taux de change des devises</a></p><p><a href="/unit-converter/fr-FR/clothing-men/">Tailles des vêtements et chaussures pour homme</a></p><p><a href="/unit-converter/fr-FR/clothing-women/">Taille des vêtements et chaussures pour femme</a></p></div><div id="uc-description-popup"></div><div class="uc-aux-links"><a href="/unit-converter/fr-FR/numbers/" class="selected">Calculateur compact</a> <a href="/unit-converter/fr-FR/numbers/verbose/">Calculateur complet</a> <a href="/unit-converter/fr-FR/numbers/definitions/">Définitions des unités</a> </div><div class="uc-aux-links"><a href="/unit-converter/fr-FR/numbers/pairs/"><img src="/static/img/text.gif" alt="Unit pairs" style="width:16px;height:16px;vertical-align:middle;"/></a> <a href="/unit-converter/fr-FR/">Convertisseurs d’unités en ligne</a> <a href="/unit-converter/fr-FR/#toc-Common">Convertisseurs d’unités populaires</a> </div><p class="uc-tran-help">Rencontrez-vous des difficultés à traduire une unité de mesure dans une autre langue ? Nous vous proposons notre aide ! <a href="/tcterms/fr-FR/"><b>Posez votre question sur TCTerms</b></a> et vous obtiendrez une réponse de nos traducteurs spécialisés dans les domaines techniques en quelques minutes.</p><div id="tcBtmPageTran" data-lc="fr" data-pg="UC_numbers" data-t="Cette page a été traduite par : {0}."></div><script type="text/javascript" src="/static/pgTran.js?20191204"></script>
+  </td>
+  </tr></table>
+  <div class="uc-right-column">
+    <div class="uc-right-column-inner">
+<h3>Convertisseurs d’unités populaires</h3>Longueur, masse, volume, surface, température, pression, énergie, puissance, vitesse et autres convertisseurs d’unités de mesure populaires.<h3>Convertisseur de nombres</h3><p>La <b>notation positionnelle</b> ou numération de positionnement est une méthode qui a pour but de représenter ou chiffrer les numéros. La notation positionnelle se distingue des autres notations (comme la numération romaine) pour son utilisation du même symbole pour les différents ordres de puissance (par exemple, la «&nbsp;place des uns&nbsp;», la «&nbsp;place des dizaines&nbsp;», la «&nbsp;place des centaines&nbsp;»). Dans les systèmes de numération mathématiques, la base de numération correspond souvent au nombre de chiffres uniques, y compris zéro, utilisé par un système de numération positionnelle pour représenter les nombres.</p><p>Base 1 — Système unaire. C’est le système de numération le plus simple pour représenter des entiers naturels&nbsp;: pour représenter un nombre N, un symbole arbitrairement choisi représentant 1 est répété N fois.</p><p>Base 2 — Système binaire. C’est un système de position avec une base de 2, dans lequel les valeurs des chiffres sont représentées par deux symboles&nbsp;: 0 et 1.</p><p>Base 3 — Système ternaire (ou trinaire). Un chiffre ternaire est connu sous le nom trit. Il utilise les chiffres 0, 1 et 2 pour représenter n’importe quel nombre réel. Ce système est parfois utilisé dans la logique et l’informatique pour compter trois états (bas, haut, inconnu ou ouvert).</p><p>Base 8 — Le système octal est le système de numération de base 8 utilisant les chiffres de 0 à 7. Il est utilisé dans le matériel numérique.</p><p>Base 10 — Le système décimal (ou à base-dix) est un système de numération positionnelle ayant 10 comme base. C’est la base de numération la plus largement utilisée par les civilisations modernes.</p><p>Base 12 — Le système duodécimal (ou dozénal ou base douze) est un système de notation positionnelle qui utilise douze comme base.</p><p>Base 16 — Le système hexadécimal (ou base 16, ou hexagone) est un système de numération positionnelle en base 16. Il est utilisé dans le matériel numérique moderne, l’informatique et les mathématiques.</p><p>Dans les systèmes dont la base est inférieure à 36, les symboles de 0 à 9 représentent le plus souvent des valeurs de zéro à neuf, et les lettres latines de A à Z et éventuellement de a à z représentent des valeurs de 10 à 36.</p><h3>Utiliser le convertisseur Convertisseur de nombres</h3><p>Ce convertisseur d’unité en ligne permet d'obtenir des conversions rapides et précises de différentes unités de mesure d'un système à un autre. La page Conversion d’unités propose une solution pour les ingénieurs, traducteurs et autres personnes devant travailler avec des quantités mesurées dans des unités différentes.</p><div class="uc-video"><div class="center"><div class="uc-youtube" id="PYpmptECaYc" data-params="modestbranding=0&showinfo=1&controls=2&vq=hd720" style="width: 268px; height: 180px;"></div><p><a href="/unit-converter/fr-FR/videos/?mode=English">Apprenez l’anglais technique grâce à nos vidéos&nbsp;!</a></p></div></div><p>Sur ce calculateur, la notation E est utilisée pour représenter les numéros trop petits ou trop grands. <b>La notation E</b> est un format alternatif de la notification scientifique a ·&nbsp;10<sup>x</sup>. Par exemple&nbsp;: 1&nbsp;103&nbsp;000 = 1,103&nbsp;·&nbsp;10<sup>6</sup> = 1,103E+6. Ici E (pour exposant) représente «&nbsp;· 10^&nbsp;», qui signifie «&nbsp;<i>fois dix puissance</i>&nbsp;». La notation E est fréquemment utilisée sur les calculatrices et par les scientifiques, mathématiciens et ingénieurs.</p><ul class="uc-usage"><li>Sélectionnez l’unité à convertir dans la zone à gauche contenant la liste d’unités.</li><li>Sélectionnez l’unité vers laquelle convertir dans la zone à droite contenant la liste d’unités.</li><li>Entrez la valeur (par exemple « 15 ») dans la zone <b>De</b>.</li><li>Le résultat s’affichera dans la zone <b>Résultat</b> et dans la zone <b>Vers</b>.</li><li>Vous pouvez également entrer la valeur dans la zone <b>Vers</b> et lire le résultat dans les zones <b>De</b> et <b>Résultat</b>.</li></ul><p><a href="http://silentmatt.com/biginteger/" title="JavaScript BigInteger Library Is used for calculations in this converter.">JavaScript BigInteger Library</a></p><p class="uc-feedback-block">Nous travaillons dur pour garantir que les résultats présentés par les convertisseurs et calculateurs de TranslatorsCafe.com soient exacts. Toutefois, nous ne garantissons pas que nos convertisseurs et calculateurs seront exempts d’erreurs. Tout le contenu est fourni « tel quel », sans aucune garantie. <a href="https://www.translatorscafe.com/tcterms/help/?ctg=C&amp;HelpID=68" target="_blank">Conditions générales</a>.</p><p class="uc-feedback-block">Si vous remarquez une erreur dans le texte ou dans les calculs, ou si vous avez besoin d’un autre convertisseur que vous ne trouvez pas ici, merci de <a href="/tcutils/support/?form=unitconverter">nous le faire savoir</a> !</p><p class="small"><a href="http://www.youtube.com/channel/UCNGFLx38uGMTQAjqa91Jc0A">TranslatorsCafe.com Convertisseur d'unité Chaîne YouTube</a></p>
+    </div>
   </div>
 
-  <div class="field box">
-    <label for="obase">...à convertir en base</label>
-    <select name="obase" id="obase">
-        <option value="2"
-        >2
-            (binaire)
-        </option>
-        <option value="3"
-        >3
-        </option>
-        <option value="4"
-        >4
-        </option>
-        <option value="5"
-        >5
-        </option>
-        <option value="6"
-        >6
-        </option>
-        <option value="7"
-        >7
-        </option>
-        <option value="8"
-        >8
-            (octale)
-        </option>
-        <option value="9"
-        >9
-        </option>
-        <option value="10"
-          selected="selected"
-        >10
-            (décimale)
-        </option>
-        <option value="11"
-        >11
-        </option>
-        <option value="12"
-        >12
-        </option>
-        <option value="13"
-        >13
-        </option>
-        <option value="14"
-        >14
-        </option>
-        <option value="15"
-        >15
-        </option>
-        <option value="16"
-        >16
-            (hexadécimale)
-        </option>
-    </select>
-  </div>
-  <div class="field box">
-    <label for="prec">Précision de calcul (nombre de chiffres décimaux):</label>
-    <select name="prec" id="prec">
-        <option value="5"
-        >5</option>
-        <option value="8"
-        >8</option>
-        <option value="10"
-        >10</option>
-        <option value="12"
-        >12</option>
-        <option value="16"
-        >16</option>
-        <option value="20"
-        >20</option>
-        <option value="30"
-          selected="selected"
-        >30</option>
-        <option value="50"
-        >50</option>
-        <option value="100"
-        >100</option>
-        <option value="200"
-        >200</option>
-        <option value="500"
-        >500</option>
-        <option value="1000"
-        >1000</option>
-        <option value="2000"
-        >2000</option>
-    </select>
-  </div>
- <div class="wimscenter" ><input type="submit" value="Convertir&nbsp;!" /></div>
-
-</div></form>
-<div class="wims_instruction">
-  <ul>
-    <li>
-      Tapez <span class="tt wims_code_variable">pi</span> pour <span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml88143" mathsize="110%"><mi>&pi;</mi><mo>=</mo><mn>3.14159</mn><mo>.</mo><mo>.</mo><mo>.</mo><mo>,</mo></mstyle></math></span> 
-   <span class="tt wims_code_variable">e</span> pour <span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml93622" mathsize="110%"><mi>e</mi><mo>=</mo><mn>2.71828</mn><mo>.</mo><mo>.</mo><mo>.</mo></mstyle></math></span>,
-   <span class="tt wims_code_variable">sqrt(2)</span> pour
-<span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml96742" mathsize="110%"><msqrt><mn>2</mn></msqrt></mstyle></math></span>      = 1.41421...
-    </li><li>
-      Utilisez <b>impérativement</b> les lettres majuscules pour les
-   représentations en base &gt; 10.
-    </li><li>
-      Les opérations algébriques <span class="tt wims_code_variable">+ - * / ^</span> 
-sont admises, ainsi que des paires de parenthèses. Les fonctions transcendantes acceptées sont
-      <span class="tt wims_code_variable"> sin(), cos(), exp(), log(), atan()</span>.
-    </li>
-  </ul>
 </div>
-
-
-<!-- begin of html/homeref.phtml -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- END of html/homeref.phtml -->
-<!-- begin of Nikaia/tail -->
-   <br class="clearall" />
-
-  </div><!--end of wimsbody-->
- <br class="clearall spacer" />
-</div><!--end of wimspagebox-->
-
-<div class="wims_topback">
-    <a id="back-to-top" href="#wimstopbox" title="Haut de page"></a>
+<div class="uc-bottom">
+  <div class="uc-group">
+    <div class="uc-col" style="width: 25%; max-width:350px;">
+      <p><a href="/cafe/"><b>TranslatorsCafe.com</b></a></p>
+      <p><a href="/unit-converter/fr-FR/">Convertisseurs d’unités en ligne</a></p>
+      <p><a href="/unit-converter/fr-FR/calculators/">Outils de Calcul</a></p>
+      <p><a href="/unit-converter/fr-FR/siteMap.aspx">Le plan du site</a></p><p><a href="https://www.translatorscafe.com/unit-converter/fr-FR/numbers/5-13/base-2-base-10/?mobile=1" accesskey="M">Vue d'un appareil mobile</a></p><div class="uc-install-app-block"><button>Installer le convertisseur</button></div>
+    </div>
+    <div class="uc-col" style="width:45%; max-width:350px;" id="ui-language">
+      <p><b>Choisissez la langue du site</b></p><ul class="uc-ui-languages"><li><a href="/unit-converter/EN/numbers/5-13/base-2-base-10/">English</a></li> <li class="selected">Français</li> <li><a href="/unit-converter/DE/numbers/5-13/base-2-base-10/">Deutsch</a></li> <li><a href="/unit-converter/ID/numbers/5-13/base-2-base-10/">Bahasa Indonesia</a></li> <li><a href="/unit-converter/IT/numbers/5-13/base-2-base-10/">Italiano</a></li> <li><a href="/unit-converter/RU/numbers/5-13/base-2-base-10/">Русский</a></li> <li><a href="/unit-converter/ES/numbers/5-13/base-2-base-10/">Español</a></li> <li><a href="/unit-converter/TR/numbers/5-13/base-2-base-10/">Türkçe</a></li> </ul>
+    </div>
+    <div class="uc-col" style="width:30%; max-width:320px;">
+      <p><b>Conseiller ce convertisseur :</b></p>
+      <div class="uc-socbmks"><a class="twitter short-url" target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?source=webclient&amp;url=https%3a%2f%2fwww.translatorscafe.com%2funit-converter%2ffr-FR%2fnumbers%2f5-13%2fbase-2-base-10%2f&amp;text=Convertisseurs+d%e2%80%99unit%c3%a9s+en+ligne&amp;via=transcafe" data-url="https%3a%2f%2fwww.translatorscafe.com%2funit-converter%2ffr-FR%2fnumbers%2f5-13%2fbase-2-base-10%2f" data-text="Convertisseurs+d%e2%80%99unit%c3%a9s+en+ligne" data-tp="https://twitter.com/intent/tweet?source=webclient&amp;url=[url]&amp;text=[txt]&amp;via=transcafe">Twitter</a> <a class="fb" target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.translatorscafe.com%2funit-converter%2ffr-FR%2fnumbers%2f5-13%2fbase-2-base-10%2f&amp;t=Convertisseurs+d%e2%80%99unit%c3%a9s+en+ligne">Facebook</a> <a class="google" target="_blank" rel="nofollow" href="https://plus.google.com/share?url=https%3a%2f%2fwww.translatorscafe.com%2funit-converter%2ffr-FR%2fnumbers%2f5-13%2fbase-2-base-10%2f">Google+</a> <a class="vk" target="_blank" rel="nofollow" href="http://vk.com/share.php?url=https%3a%2f%2fwww.translatorscafe.com%2funit-converter%2ffr-FR%2fnumbers%2f5-13%2fbase-2-base-10%2f">VK</a></div><p>Utilisateurs actifs : <b>1428</b></p>
+    </div>
+  </div>
+  <p style="margin-top:16pt;">
+    <a href="https://www.translatorscafe.com/tcterms/help/?ctg=C&amp;HelpID=68" target="_blank">Conditions générales</a>
+    | <a href="https://www.translatorscafe.com/tcterms/help/?ctg=C&amp;HelpID=69" target="_blank">Politique de confidentialité</a>
+  </p>
+  <p>&copy; ANVICA Software Development 2002—2022.</p>
+  <p class="ver">TC UC Version: 2017-02-01</p>
 </div>
-  <script>
-    jQuery(function($){
-      $('#back-to-top').on('click', function(e) {
-        e.preventDefault();
-        $('html,body').animate({
-          scrollTop: 0
-        }, 700);
-      });
-    });
+  
+  <script type="text/javascript">
+    var u = new TcUcInfo ("numbers", "/unit-converter/", "fr-FR",
+     {path: "/static/ucvt/factors/", file: "Numbers"},
+     {close: "Fermer",
+      msNoDsc: "La description sera disponible prochainement.",
+      msii: "Entrée invalide",
+      rfc: "sv", iic: "ucii", dyni: "", stat: "/static/",
+      udHelpSelector: ".uc-help", udws: "/unit-converter/ws.aspx?op=ui&uc={uc}&i={ui}&lc={lc}", descrPopupId: "uc-description-popup"});
+    ucInit({ url: "/unit-converter/", mob: false, needFocus: false});
+    
   </script>
 
+  <script src="/static/tcucsc.js?20200514"></script>
+  <script>
+    tcsc({cv:"numbers",mode:"1",lc:"fr",mobile:false, ns:true});
+  </script>
 
-
-
-
-  <!-- MENU BAS DE PAGE -->
-
-
-  </div>
-  <!-- FIN WIMSBODYBOX -->
-
-  <!--A propos-->
-  <!-- _widgets/about.phtml -->
-  <div id="wimstailbox">
-   <div class="wimstail">
-     <div class="tailitem">
-
-
- Auteur de la page: <a href="#" class="text_icon mail" onclick="m3=new Array('wimsedu.info','subject','qualite','mail'); window.location=m3[3]+'to'+':'+m3[2]+'&#64;'+m3[0]+'?'+m3[1]+'=WIMS Convertisseuse de base [fr]';">Gang XIAO</a>
-     </div><!--tailitem-->
-     <div class="tailitem">
-
-
- Version 2.16, &copy; 1998 (<a href="COPYING">GNU GPL</a>) 2008 2012 2017 2018 2019 2022
-     </div><!--tailitem-->
-   </div><!--wimstail-->
-  </div><!--wimstailbox-->
- <!-- end _widgets/about.phtml -->
-
-
-
-
-
-
-  <!-- Foundation for Sites 6 footer template (see http://foundation.zurb.com/sites/docs/)  -->
-
-  <script src="scripts/js/external/what-input/what-input.min.js"></script>
-
-  <script src="html/themes/_inc/foundation/foundation.core.js"></script>
-  <script src="html/themes/_inc/foundation/foundation.util.mediaQuery.js"></script>
-
-  <script src="html/themes/_inc/foundation/foundation.util.keyboard.js"></script>
-  <script src="html/themes/_inc/foundation/foundation.util.box.js"></script>
-  <script src="html/themes/_inc/foundation/foundation.util.nest.js"></script>
-  <script src="html/themes/_inc/foundation/foundation.util.touch.min.js"></script>
-
-  <script src="html/themes/_inc/foundation/foundation.util.motion.js"></script>
-  <script src="html/themes/_inc/foundation/foundation.reveal.js"></script>
-
-  <script src="html/themes/_inc/foundation/foundation.dropdownMenu.js"></script>
-
-
-
-
-
-
-
-  <script>jQuery(function($) {$(document).foundation();});</script>
-
-<!-- end of Nikaia/tail -->
-
-
-
-<!-- <a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=fr&+session=5WE7DDD071.1&+module=adm%2Ftrap"   >Robot trapper, do not click!</a> --><div class='wimstrap hide' aria-hidden='true'><a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=fr&+session=5WE7DDD071.1&+module=adm%2Ftrap"   ><span lang='en'>Robot trapper, do not go there!</span></a></div>
-</body></html>
+</body>
+</html>
