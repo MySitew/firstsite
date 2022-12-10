@@ -1,5 +1,709 @@
-<!DOCTYPE html>
-<body>
-    <input type="email" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="username" spellcheck="false" tabindex="0" aria-label="Adresse e-mail ou numéro de téléphone" name="identifier" autocapitalize="none" id="identifierId" dir="ltr" data-initial-dir="ltr" data-initial-value="">
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>    
+<html lang="fr"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <!--begin of Nikaia/htmlheader.phtml-->
+<meta charset="windows-1252" />
+<title>Convertisseuse de base</title>
+<meta name="GENERATOR" content="wims [fr]" />
+<meta name="description" content="convertir un nombre entre différentes bases de numération, précision arbitraire. This is the main site of WIMS (WWW Interactive Multipurpose Server): interactive exercises, online calculators and plotters, mathematical recreation and games" />
+<meta name="keywords" content="wims, mathematics, mathematical, math, maths, interactive mathematics, interactive math, interactive maths, mathematic, online, calculator, graphing, exercise, exercice, puzzle, calculus, K-12, algebra, mathématique, interactive, interactive mathematics, interactive mathematical, interactive math, interactive maths, mathematical education, enseignement mathématique, mathematics teaching, teaching mathematics, algebra, geometry, calculus, function, curve, surface, graphing, virtual class, virtual classes, virtual classroom, virtual classrooms, interactive documents, interactive document, algebra, number, numeration, conversion" />
+<meta name="Author" content="XIAO,Gang" />
+
+
+
+<!-- makes browsers render all elements more consistently -->
+<link rel="stylesheet" href="scripts/js/external/normalize.min.css" />
+
+<!-- METAS iOS : -->
+<link rel="apple-touch-icon" href="gifs/wims_logo.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- prevents links from apps from opening in mobile safari>
+<script src="scripts/js/external/safari_mobile_links/compressed.js"></script-->
+
+<!-- Librairies JQUERY -->
+<script src="scripts/js/external/jquery/jquery.min.js"></script>
+<link rel="stylesheet" href="scripts/js/external/jquery-ui/themes/smoothness/jquery-ui.min.css" />
+<script src="scripts/js/external/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Foundation Accordion -->
+<link rel="stylesheet" href="html/themes/_css/foundation_accordion.css" />
+
+<link href="html/themes/Nikaia/css.css?ver=4.24" rel="stylesheet" /><link href="gifs/themes/Font_Awesome/icon-min.css?ver=4.24" rel="stylesheet" />
+
+<!-- wimsmenumodubox -->
+<script src="html/themes/_inc/wimsmenumodubox.js"></script>
+
+<!-- javascripts utils -->
+<!--script src="scripts/js/utils.js"></script-->
+<!-- JQUERY pour autocompletion -->
+<script src="scripts/js/interface/autocomplete.js"></script>
+
+<!-- Style pour impression -->
+<link rel="stylesheet" media="print" href="html/themes/_css/print.css" />
+
+<style>
+/* Attention : ne surtout pas utiliser "background image" ici, cela crÃ©e des bugs Ã©tranges (exercices incohÃ©rents dans modtool...);*/
+
+/* Couleurs CSS configurables depuis la configuration du site */
+:root {
+  --wims_bgcolor: #f6f6f9;
+  --wims_link_color: #1468A0;
+  --wims_vlink_color: #1779BA;
+  --wims_hlink_color: #004077;
+  --wims_ref_menucolor: #fefefe;
+  --wims_ref_bgcolor: #4173ac;
+  --wims_ref_button_color: #ffffff;
+  --wims_ref_button_bgcolor: #4179b3;
+  --wims_ref_button_help_bgcolor: #0e8a16;
+  --wims_ref_button_help_color: #ffffff;
+}
+
+.main_body:not(.mode_popup) {
+  background-color: var(--wims_ref_bgcolor);
+  /*color: ;*/
+  
+}
+
+a, .ui-widget-content a{color:var(--wims_link_color);}
+/*a:visited {color:var(--wims_vlink_color);}*/
+a:hover, a:focus {color:var(--wims_hlink_color);}
+
+#wimsbodybox{
+  /*default background-color */
+  background-color: #f5f5f5;
+  background-color: var(--wims_bgcolor);
+}
+
+div#wimstailbox,
+.oef_name_menu,
+table.wimstable th,
+.answer_analysis .oefanswername{
+  background-color: var(--wims_ref_bgcolor);
+  color: var(--wims_ref_menucolor);
+}
+div#wimstailbox a,
+.wimstable th a{
+  color: var(--wims_ref_menucolor);
+}
+
+/* Foundation dropdown custom css */
+.dropdown.menu > li.is-dropdown-submenu-parent > a:after { border-top-color: var(--wims_ref_bgcolor);}
+.dropdown.menu > li.is-dropdown-submenu-parent:hover > a:after { border-top-color: var(--wims_ref_bgcolor);}
+.dropdown.menu > li.is-dropdown-submenu-parent.is-active > a:after{ border-top-color: var(--wims_ref_menucolor);}
+.dropdown.menu > li.is-active>a,.menu a:hover,#wimsbodybox .menu a:hover
+  { background-color: var(--wims_ref_bgcolor);color:var(--wims_ref_menucolor)}
+.is-dropdown-submenu li:hover{ background-color: var(--wims_ref_bgcolor)}
+.is-dropdown-submenu a:hover{ color:var(--wims_ref_menucolor)}
+
+
+/* Sliding MenuModuBox */
+
+.slide-menu-closed .slide-menu:hover, .slide-menu-opened .slide-menu{
+  background-color: var(--wims_ref_bgcolor);
+}
+
+.slide-menu, .slide-menu a{
+  color: var(--wims_ref_menucolor);
+}
+
+
+.wimstable caption a{
+  color: var(--wims_ref_menucolor);
+}
+
+.infobulle{
+  background-color: var(--wims_ref_button_bgcolor);
+  color: var(--wims_ref_button_color);
+}
+
+/*.menuitem a:before{color:var(--wims_ref_bgcolor);}*/
+.wims_emph {color:var(--wims_ref_bgcolor);}
+
+/* Breadcrumb */
+.breadcrumbs>li>a{color: var(--wims_ref_bgcolor)}
+
+
+input[type="submit"],input[type="button"], .main_body .wims_button{
+    background-color:var(--wims_ref_button_bgcolor);
+    color:var(--wims_ref_button_color);
+}
+.main_body .wims_button_help{
+    background-color:var(--wims_ref_button_help_bgcolor);
+    color:var(--wims_ref_button_help_color);
+}
+
+
+.property_fields
+  {border-color:var(--wims_ref_bgcolor);}
+.property_fields legend
+  {background-color: var(--wims_ref_bgcolor);}
+.property_fields legend,.property_fields legend>a
+  {color:var(--wims_ref_menucolor);}
+
+.wims_color1 {
+   background-color: var(--wims_ref_bgcolor);
+   color:var(--wims_ref_menucolor);
+}
+.wims_color2 {
+  background-color:var(--wims_ref_button_bgcolor);
+  color:var(--wims_ref_button_color);
+}
+.wims_color3 {
+  background-color:var(--wims_ref_button_help_bgcolor);
+  color:var(--wims_ref_button_help_color);
+}
+
+
+</style>
+
+
+<!--end Nikaia/htmlheader.phtml-->
+
+
+<script>/*<![CDATA[*/function wims_mathml_zoom(id){var math = document.getElementById(id);if(math.getAttribute("mathsize") == "100%"){  math.setAttribute("mathsize","200%");}else{  math.setAttribute("mathsize","100%");};};window.addEventListener("load", function() {  var ua = navigator.userAgent.toLowerCase();  var gecko = ua.indexOf("gecko") > -1 && ua.indexOf("khtml") === -1 && ua.indexOf("trident") === -1;  if(! gecko ){    var script = document.createElement("script");    script.src  = "scripts/js/mathjax/mml-chtml.js";    document.head.appendChild(script);  };});/*]]>*/</script>
+
+<script>reload_mathML=function(){var t=document.getElementsByClassName("wims_mathml");Array.prototype.filter.call(t,function(t){var e=t.style.display;t.style.display="none",t.style.opacity="0",setTimeout(function(){t.style.display=e},1e3),setTimeout(function(){t.style.opacity="1"},1100)})},document.onreadystatechange=function(){"complete"===document.readyState&&(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)&&reload_mathML())};</script></head>
+<body class="main_body" dir="ltr"  >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- begin of Nikaia/header.phtml -->
+
+
+
+
+
+
+
+<!-- Start Nikaia topbox Widget -->
+<div id="wimstopbox">
+
+<!-- _widgets/site_title-->
+<div id="wims_title">
+  <div class="wimslogo">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?session=5WE7DDD071.1&+lang=fr&+module=home&+special_parm=logo"   ><img src="gifs/logo.gif" alt="WIMS logo" /></a>  </div>
+  <h1 class="wims_title">WIMS
+    <span class="smaller wims_subtitle">
+      <a href="/">wims.univ-cotedazur.fr</a>
+    </span>
+  </h1>
+</div>
+<!--end _widgets/site_title-->
+
+
+<!-- _widgets/institution_logo.phtml -->
+<!-- END _widgets/institution_logo.phtml -->
+
+    <br class="clearall" />
+
+  <div class="menuglobal top-bar">
+
+
+
+
+    <ul class="wimsmenu menu top-bar-left">
+
+    </ul>
+
+
+<!-- widget user_links -->
+<ul class="wimsmenu dropdown menu" data-dropdown-menu data-options="data-autoclose:true;">
+
+
+
+<!-- _widgets/headmenu.phtml -->
+ <li class="menuitem about">
+
+
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?wims_window=new&+session=5WE7DDD071_mhelp&+lang=fr&+module=tool%2Fnumber%2Fbaseconv.fr&+cmd=help&+special_parm=about" target="wims_help" onclick="wims_help=window.open('','wims_help','status=no,toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=yes')"   class="about"  title="Pour des informations sur le module tool/number/baseconv.fr, son auteur, la version ..."><span class="text_item">À propos </span></a> </li>
+<!-- end _widgets/headmenu.phtml -->
+
+
+        <li id="language_selector" class="language_selector menuitem is-dropdown-submenu-parent">
+          <a href="#lang_list" class="lang">
+            <span><img src="gifs/fr.gif" alt="Français" /> Langue</span>
+          </a>
+
+<!-- begin of _widgets/language_selector.phtml -->
+<ul id="lang_list" class="language_selector menu">
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=en&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="English"><img src="gifs/en.gif" alt="English" class="vignette" /><span class="legende"> English</span></a>    </li>
+    <li class="menuitem
+        disabled">
+        <a class="current"><img src="gifs/fr.gif" alt="Français" class="vignette"/><span class="legende"> Français</span> <span class="smaller">(actuel)</span></a>
+    </li>
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=it&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Italiano"><img src="gifs/it.gif" alt="Italiano" class="vignette" /><span class="legende"> Italiano</span></a>    </li>
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=es&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Español"><img src="gifs/es.gif" alt="Español" class="vignette" /><span class="legende"> Español</span></a>    </li>
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=nl&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Nederlands"><img src="gifs/nl.gif" alt="Nederlands" class="vignette" /><span class="legende"> Nederlands</span></a>    </li>
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=cn&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Chinese gb"><img src="gifs/cn.gif" alt="Chinese gb" class="vignette" /><span class="legende"> Chinese gb</span></a>    </li>
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=si&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Slovensko"><img src="gifs/si.gif" alt="Slovensko" class="vignette" /><span class="legende"> Slovensko</span></a>    </li>
+    <li class="menuitem
+        ">
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=ca&+session=5WE7DDD071.1&+module=tool%2Fnumber%2Fbaseconv.fr"    title="Català"><img src="gifs/ca.gif" alt="Català" class="vignette" /><span class="legende"> Català</span></a>    </li>
+</ul>
+<!-- end of _widgets/language_selector.phtml -->
+
+        </li>
+</ul>
+<!-- end widget user_links -->
+
+  </div><!-- /menuglobal -->
+
+
+
+<!-- _widgets/ariane.phtml -->
+<nav aria-label="You are here:">
+  <ul class="breadcrumbs">
+    <li class="home menuitem">
+
+
+<a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=fr&+session=5WE7DDD071.1"   class="home"  title="Page d'accueil du serveur"><span>Accueil WIMS </span></a>        <span class="show-for-sr">(Current)</span>
+    </li>
+  </ul>
+</nav>
+
+</div><!-- fin de wimstopbox-->
+
+<!-- End Nikaia topbox Widget -->
+
+
+  <div id="wimsbodybox" class="no-js
+  ">
+
+
+  <div id="wimspagebox"
+
+   class="zone_etu type_"
+  >
+
+
+
+
+
+
+
+
+
+<!-- END of Nikaia/header -->
+
+
+
+  <div class="wimsbody">
+<!-- END of html/headmenu -->
+
+
+
+<!-- Begin html/title.phtml -->
+<div class="title_box">
+ <h1 class="wims_title">
+   <span class="titre">Convertisseuse de base</span>
+  <br class="clearall"/>
+ </h1>
+</div>
+<!-- end html/title.phtml -->
+
+<p>
+  Cet outil très simple vous permet d'écrire un même nombre dans différentes 
+bases de numération.
+</p><p>
+  Par exemple, le nombre <span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml82043" mathsize="110%"><mi>&pi;</mi></mstyle></math></span> s'écrit &nbsp;:<ul><li>3.14159... en décimale (base 10),</li>
+ <li>3.243F6... en hexadécimale (base 16)</li><li>ou 11.001001... en binaire (base 2).</li></ul>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr style="width:50%" />
+<form action="https://wims.univ-cotedazur.fr/wims/wims.cgi" method="get"  >
+<div class='wims_form'><input type="hidden" name="session" value="5WE7DDD071.1" />
+<input type="hidden" name="lang" value="fr" />
+<input type="hidden" name="cmd" value="reply" />
+<input type="hidden" name="module" value="tool/number/baseconv.fr" />
+  <div class="field box">
+    <label for="input">Entrez votre nombre</label>
+    <input size="45" name="input" value="" id ="input" required/>
+    <label for="ibase">écrit en base</label>
+    <select name="ibase" id="ibase">
+        <option value="2"
+        >2
+            (binaire)
+        </option>
+        <option value="3"
+        >3
+        </option>
+        <option value="4"
+        >4
+        </option>
+        <option value="5"
+        >5
+        </option>
+        <option value="6"
+        >6
+        </option>
+        <option value="7"
+        >7
+        </option>
+        <option value="8"
+        >8
+            (octale)
+        </option>
+        <option value="9"
+        >9
+        </option>
+        <option value="10"
+          selected="selected"
+        >10
+            (décimale)
+        </option>
+        <option value="11"
+        >11
+        </option>
+        <option value="12"
+        >12
+        </option>
+        <option value="13"
+        >13
+        </option>
+        <option value="14"
+        >14
+        </option>
+        <option value="15"
+        >15
+        </option>
+        <option value="16"
+        >16
+            (hexadécimale)
+        </option>
+    </select>
+  </div>
+
+  <div class="field box">
+    <label for="obase">...à convertir en base</label>
+    <select name="obase" id="obase">
+        <option value="2"
+        >2
+            (binaire)
+        </option>
+        <option value="3"
+        >3
+        </option>
+        <option value="4"
+        >4
+        </option>
+        <option value="5"
+        >5
+        </option>
+        <option value="6"
+        >6
+        </option>
+        <option value="7"
+        >7
+        </option>
+        <option value="8"
+        >8
+            (octale)
+        </option>
+        <option value="9"
+        >9
+        </option>
+        <option value="10"
+          selected="selected"
+        >10
+            (décimale)
+        </option>
+        <option value="11"
+        >11
+        </option>
+        <option value="12"
+        >12
+        </option>
+        <option value="13"
+        >13
+        </option>
+        <option value="14"
+        >14
+        </option>
+        <option value="15"
+        >15
+        </option>
+        <option value="16"
+        >16
+            (hexadécimale)
+        </option>
+    </select>
+  </div>
+  <div class="field box">
+    <label for="prec">Précision de calcul (nombre de chiffres décimaux):</label>
+    <select name="prec" id="prec">
+        <option value="5"
+        >5</option>
+        <option value="8"
+        >8</option>
+        <option value="10"
+        >10</option>
+        <option value="12"
+        >12</option>
+        <option value="16"
+        >16</option>
+        <option value="20"
+        >20</option>
+        <option value="30"
+          selected="selected"
+        >30</option>
+        <option value="50"
+        >50</option>
+        <option value="100"
+        >100</option>
+        <option value="200"
+        >200</option>
+        <option value="500"
+        >500</option>
+        <option value="1000"
+        >1000</option>
+        <option value="2000"
+        >2000</option>
+    </select>
+  </div>
+ <div class="wimscenter" ><input type="submit" value="Convertir&nbsp;!" /></div>
+
+</div></form>
+<div class="wims_instruction">
+  <ul>
+    <li>
+      Tapez <span class="tt wims_code_variable">pi</span> pour <span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml88143" mathsize="110%"><mi>&pi;</mi><mo>=</mo><mn>3.14159</mn><mo>.</mo><mo>.</mo><mo>.</mo><mo>,</mo></mstyle></math></span> 
+   <span class="tt wims_code_variable">e</span> pour <span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml93622" mathsize="110%"><mi>e</mi><mo>=</mo><mn>2.71828</mn><mo>.</mo><mo>.</mo><mo>.</mo></mstyle></math></span>,
+   <span class="tt wims_code_variable">sqrt(2)</span> pour
+<span class="wims_mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mstyle id="wims_mathml96742" mathsize="110%"><msqrt><mn>2</mn></msqrt></mstyle></math></span>      = 1.41421...
+    </li><li>
+      Utilisez <b>impérativement</b> les lettres majuscules pour les
+   représentations en base &gt; 10.
+    </li><li>
+      Les opérations algébriques <span class="tt wims_code_variable">+ - * / ^</span> 
+sont admises, ainsi que des paires de parenthèses. Les fonctions transcendantes acceptées sont
+      <span class="tt wims_code_variable"> sin(), cos(), exp(), log(), atan()</span>.
+    </li>
+  </ul>
+</div>
+
+
+<!-- begin of html/homeref.phtml -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- END of html/homeref.phtml -->
+<!-- begin of Nikaia/tail -->
+   <br class="clearall" />
+
+  </div><!--end of wimsbody-->
+ <br class="clearall spacer" />
+</div><!--end of wimspagebox-->
+
+<div class="wims_topback">
+    <a id="back-to-top" href="#wimstopbox" title="Haut de page"></a>
+</div>
+  <script>
+    jQuery(function($){
+      $('#back-to-top').on('click', function(e) {
+        e.preventDefault();
+        $('html,body').animate({
+          scrollTop: 0
+        }, 700);
+      });
+    });
+  </script>
+
+
+
+
+
+  <!-- MENU BAS DE PAGE -->
+
+
+  </div>
+  <!-- FIN WIMSBODYBOX -->
+
+  <!--A propos-->
+  <!-- _widgets/about.phtml -->
+  <div id="wimstailbox">
+   <div class="wimstail">
+     <div class="tailitem">
+
+
+ Auteur de la page: <a href="#" class="text_icon mail" onclick="m3=new Array('wimsedu.info','subject','qualite','mail'); window.location=m3[3]+'to'+':'+m3[2]+'&#64;'+m3[0]+'?'+m3[1]+'=WIMS Convertisseuse de base [fr]';">Gang XIAO</a>
+     </div><!--tailitem-->
+     <div class="tailitem">
+
+
+ Version 2.16, &copy; 1998 (<a href="COPYING">GNU GPL</a>) 2008 2012 2017 2018 2019 2022
+     </div><!--tailitem-->
+   </div><!--wimstail-->
+  </div><!--wimstailbox-->
+ <!-- end _widgets/about.phtml -->
+
+
+
+
+
+
+  <!-- Foundation for Sites 6 footer template (see http://foundation.zurb.com/sites/docs/)  -->
+
+  <script src="scripts/js/external/what-input/what-input.min.js"></script>
+
+  <script src="html/themes/_inc/foundation/foundation.core.js"></script>
+  <script src="html/themes/_inc/foundation/foundation.util.mediaQuery.js"></script>
+
+  <script src="html/themes/_inc/foundation/foundation.util.keyboard.js"></script>
+  <script src="html/themes/_inc/foundation/foundation.util.box.js"></script>
+  <script src="html/themes/_inc/foundation/foundation.util.nest.js"></script>
+  <script src="html/themes/_inc/foundation/foundation.util.touch.min.js"></script>
+
+  <script src="html/themes/_inc/foundation/foundation.util.motion.js"></script>
+  <script src="html/themes/_inc/foundation/foundation.reveal.js"></script>
+
+  <script src="html/themes/_inc/foundation/foundation.dropdownMenu.js"></script>
+
+
+
+
+
+
+
+  <script>jQuery(function($) {$(document).foundation();});</script>
+
+<!-- end of Nikaia/tail -->
+
+
+
+<!-- <a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=fr&+session=5WE7DDD071.1&+module=adm%2Ftrap"   >Robot trapper, do not click!</a> --><div class='wimstrap hide' aria-hidden='true'><a href="https://wims.univ-cotedazur.fr/wims/wims.cgi?lang=fr&+session=5WE7DDD071.1&+module=adm%2Ftrap"   ><span lang='en'>Robot trapper, do not go there!</span></a></div>
+</body></html>
