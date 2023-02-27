@@ -1,29 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #333;
+	font-family: Arial, sans-serif;
 }
 
-.game-container {
+header {
+	background-color: #f00;
+	color: #fff;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	justify-content: space-between;
+	padding: 10px 20px;
 }
 
-.road {
-	position: relative;
-	width: 300px;
-	height: 500px;
-	background-color: #ddd;
+.logo {
+	font-size: 30px;
+	font-weight: bold;
 }
 
-.car {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 50px;
-	height: 80px;
-	background-color: red;
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+.video-section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.video-container {
+	flex: 1;
+	margin-right: 20px;
+}
+
+.description {
+	flex: 1;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #f00;
+	margin-top: 0;
+}
+
+p {
+	line-height: 1.5;
+}
+
+button {
+	background-color: #f00;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #d00;
+}
+
+footer {
+	background-color: #f00f0;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 50px;
 }
